@@ -36,16 +36,18 @@ Backend is using djangorestframework
 API Endpoints
 
 * GET /
- Gives list of possible actions
+
+Gives list of possible actions
 
 * GET /generate_colours/
+
 Gives list of 5 randomly generated colours in rgb and hsl colourspaces
 Eg.
 HTTP 200 OK
 Allow: GET, OPTIONS
 Content-Type: application/json
 Vary: Accept
-
+```json
 [
     {
         "scheme": "rgb",
@@ -68,6 +70,7 @@ Vary: Accept
         "value": "rgb(157, 107, 16)"
     }
 ]
+```
 
 Decorator random_num_deco in api/views.py file is used to generate a list of random numbers (int and floats) depending on the parameters used in colour colourspaces
 For eg. RGB uses 3 colours with 0 as min value and 255 as max value for Red, Green, Blue respectively
