@@ -5,7 +5,7 @@
 A service that could be easily used, and also easily extended, by all the teams in the company.
 The service should be able to render a "swatch" of five colors, each color being potentially represented in a different color space (RGB, HSL, etc).
 
-##Folder Structure
+## Folder Structure
 
 ├── api
 │   ├── admin.py
