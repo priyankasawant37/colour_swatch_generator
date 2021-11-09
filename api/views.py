@@ -15,23 +15,24 @@ def routes(request):
             'description': 'Returns Five Random Colours'
         },
         {
+            'Endpoint': '/show_swatch/',
+            'method': 'GET',
+            'body': None,
+            'description': 'Displays Five Colours Swatch'
+        },
+        {
             'Endpoint': '/rgb_to_hls?r={}&g={}&b={}',
             'method': 'GET',
             'body': None,
             'description': 'Returns RGB to HSL codes'
         },
         {
-            'Endpoint': '/hsl_to_rgb/colour/',
+            'Endpoint': '/hsl_to_rgb?h={}&s={}&l={}',
             'method': 'GET',
             'body': None,
             'description': 'Returns HSL to RGB codes'
         },
-        {
-            'Endpoint': '/show_swatch/',
-            'method': 'GET',
-            'body': None,
-            'description': 'Displays Five Colours Swatch'
-        },
+
     ]
     return Response(routes)
 
@@ -66,7 +67,7 @@ def random_num_generator(low, high):
     return 0
 
 #decorator to generate random n numbers where n is length of  parameters_list
-#in the range of each number in parameters_list as a highest possible value 
+#in the range of each number in parameters_list as a highest possible value
 def meta_decorator(arg):
     def random_num_deco(func):
         def random_nums(parameters_list):
